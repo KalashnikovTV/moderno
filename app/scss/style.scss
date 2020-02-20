@@ -4,6 +4,10 @@
 
 /* start header */
 
+.header {
+    background-color: #fff;
+}
+
 .header__top-inner {
     display: flex;
     justify-content: space-between;
@@ -111,6 +115,7 @@
 }
 
 .basket {
+    margin-right: 20px;
     span {
         background-color: $green;
     }
@@ -128,7 +133,6 @@
 }
 
 .user {
-    margin-left: 20px;
     margin-right: 25px;
     padding-right: 20px;
     position: relative;
@@ -191,6 +195,7 @@
     height: 0;
     border-top: 1px solid #e0e0e0;
     overflow: hidden;
+    z-index: 1;
 }
 
 .user__box,
@@ -325,6 +330,11 @@
 
 .icons-color::before {
     color: $tomato;
+}
+
+.header__btn-menu,
+.menu__btn {
+    display: none;
 }
 /* end header */
 /* start search */
@@ -1233,3 +1243,5 @@ button.icon-unsorted {
 }
 
 /* end product-page */
+
+@import 'media';
