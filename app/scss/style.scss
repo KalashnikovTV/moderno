@@ -1570,6 +1570,41 @@ button.icon-unsorted {
     display: flex;
     justify-content: space-between;
     padding: 30px 0;
+    .jq-selectbox__select {
+        height: 26px;
+        padding: 0px 28px 0 10px;
+        color: #70838d;
+        text-shadow: none;
+        box-shadow: none;
+        border-bottom-color: #d5d5d5;
+        border-radius: 0px;
+        background: #fff;
+        line-height: 26px;
+        font-size: 13px;
+        border-bottom-color: none;
+    }
+    .jq-selectbox__trigger {
+        border-left: none;
+        top: -14px;
+        right: 5px;
+    }
+    .jq-selectbox__trigger-arrow {
+        font-size: 13px;
+        color: #8bc34a;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        &::before {
+            content: "\f0d7";
+            font-family: 'icomoon';
+            position: absolute;
+        }
+    }
+    .jq-selectbox__dropdown {
+        border-radius: 0px;
+        top: 24px;
+        border: none;
+    }
 }
 
 .price__product {
@@ -2007,7 +2042,7 @@ button.icon-unsorted {
     display: flex;
     align-items: center;
     label {
-        width: 260px;
+        min-width: 260px;
         color: #444;
     }
     input {
@@ -2028,6 +2063,46 @@ button.icon-unsorted {
         border: 1px solid #dedede;
         padding: 0 10px;
         color: #707070;
+    }
+    .jq-selectbox__select {
+        height: 40px;
+        padding: 0 18px;
+        border: 1px solid #dddddd;
+        border-bottom-color: #dddddd;
+        border-radius: 0px;
+        background: #f9f9f9;
+        box-shadow: none;
+        color: #707070;
+        text-shadow: none;
+    }
+    .jq-selectbox__select-text {
+        width: 100%;
+        display: block;
+        line-height: 40px;
+    }
+    .jq-selectbox {
+        width: 100%;
+    }
+    .jq-selectbox__trigger {
+        border-left: none;
+    }
+    .jq-selectbox__trigger-arrow {
+        right: 25px;
+        top: 0px;
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        line-height: 40px;
+        font-size: 15px;
+        color: #444;
+        &::before {
+            font-family: 'icomoon';
+            content: "\f0d7";
+        }
+    }
+    .jq-selectbox__dropdown {
+        top: 37px;
+        border: 0px solid #CCC;
     }
 }
 /* end settings */
@@ -2277,9 +2352,6 @@ button.icon-unsorted {
         span {
             color: $green;
         }
-        &::placeholder {
-            color: #707070;
-        }
     }
     select,
     input,
@@ -2290,6 +2362,9 @@ button.icon-unsorted {
         height: 40px;
         background-color: #f9f9f9;
         padding: 0px 18px;
+        &::placeholder {
+            color: #707070;
+        }
     }
     textarea {
         resize: none;
@@ -2370,10 +2445,156 @@ button.icon-unsorted {
     }
     .jq-selectbox__dropdown {
         top: 37px;
+        border: none;
+        border-radius: 0px;
     }
 }
 
 /* end upload */
+
+/* withdrawals start */
+
+
+.withdrawals__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 110px;
+}
+
+.withdrawals__col {
+    max-width: 570px;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #d7d7d7;
+    height: 100%;
+}
+
+.withdrawals__title {
+    padding: 18px 32px 24px;
+    border-bottom: 1px solid #dedede;
+    margin-bottom: 30px;
+    color: $bg;
+    @include f500;
+    font-size: 24px;
+}
+
+.withdrawals__content {
+    padding-left: 35px;
+    padding-right: 40px;
+    button {
+        margin-bottom: 50px;
+        color: #fff;
+        background-color: $green;
+        border: none;
+        padding: 15px 36px;
+        cursor: pointer;
+    }
+}
+
+.withdrawals__form-line {
+    margin-bottom: 25px;
+    label {
+        display: block;
+        width: 100%;
+        font-size: 16px;
+        @include f500;
+        margin-bottom: 15px;
+        color: $bg;
+        span {
+            color: $green;
+        }
+    }
+    input,
+    select {
+        width: 100%;
+        display: block;
+        border: 1px solid #d7d7d7;
+        height: 40px;
+        background-color: #f9f9f9;
+        padding: 0px 18px;
+        &::placeholder {
+            color: #707070;
+        }
+    }
+    .jq-selectbox {
+        width: 100%;
+    }
+    .jq-selectbox__select {
+        height: 40px;
+        padding: 0 18px;
+        border: 1px solid #d7d7d7;
+        border-bottom-color: #d7d7d7;
+        border-radius: 0px;
+        background: #f9f9f9;
+        box-shadow: none;
+        text-shadow: none;
+        color: #707070;
+        font-family: 'Roboto-Regular', sans-serif;
+        line-height: 40px;
+    }
+    .jq-selectbox__trigger-arrow {
+        border: none;
+        color: #444;
+        top: 0;
+        right: 20px;
+        line-height: 40px;
+        font-size: 15px;
+        &::before {
+            font-family: 'icomoon';
+            content: "\f0d7";
+        }
+    }
+    .jq-selectbox__trigger {
+        border-left: none;
+    }
+    .jq-selectbox__dropdown {
+        top: 37px;
+        border: none;
+        border-radius: 0px;
+    }
+}
+
+.withdrawals__content-items {
+    padding-bottom: 35px;
+}
+
+.withdrawals__content-item {
+    display: flex;
+    height: 42px;
+    align-items: center;
+    font-size: 13px;
+    color: #444;
+    &:nth-child(odd) {
+        background-color: #f9f9f9;
+    }
+}
+
+.withdrawals__content-date {
+    width: 154px;
+    padding-left: 20px;
+    @include f500;
+}
+
+.withdrawals__content-email {
+    width: 180px;
+    @include f500;
+}
+
+.withdrawals__content-price {
+    width: 70px;
+    @include f700;
+}
+
+.withdrawals__content-status {
+    width: 80px;
+    @include f700;
+    
+    &.withdrawals__content-paid{
+        color: $green;
+    }
+}
+/* withdrawals end */
+
 
 
 @import 'media';
