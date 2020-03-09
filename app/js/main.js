@@ -81,6 +81,8 @@ $(function(){
 
     $('input[type=file], select').styler();
 
+    new WOW().init();
+
     var mixer = mixitup('.products__inner-box');
 
 });
